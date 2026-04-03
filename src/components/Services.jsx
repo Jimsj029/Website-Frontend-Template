@@ -1,4 +1,4 @@
-import { useReveal } from 'src/hooks/Usereveal'
+import { useReveal } from '/src/hooks/Usereveal'
 
 function ServiceRow({ service, delay }) {
   const ref = useReveal()

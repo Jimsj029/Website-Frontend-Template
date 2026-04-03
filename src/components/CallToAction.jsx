@@ -1,7 +1,7 @@
-import { Usereveal } from '/src/hooks/Usereveal'
+import { useReveal } from '/src/hooks/Usereveal'
 
 function CallToAction({ cta }) {
-  const ref = Usereveal()
+  const ref = useReveal()
 
   return (
     <section className="cta-section" id="contact">

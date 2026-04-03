@@ -1,4 +1,4 @@
-import { useReveal } from 'src/hooks/Usereveal'
+import { useReveal } from '/src/hooks/Usereveal'
 
 function About({ about }) {
   const imgRef = useReveal()
