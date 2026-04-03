@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Marquee from './components/Marquee'
 import Services from './components/Services'
 import About from './components/About'
-import Testimonials from './components/Testimonials'
 import CallToAction from './components/CallToAction'
 import Footer from './components/Footer'
 import { siteContent } from './data/siteContent'
@@ -14,9 +14,9 @@ function App() {
       <Navbar brand={siteContent.brand} navLinks={siteContent.navLinks} />
       <main>
         <Hero hero={siteContent.hero} />
+        <Marquee items={siteContent.marquee} />
         <Services services={siteContent.services} />
         <About about={siteContent.about} />
-        <Testimonials testimonials={siteContent.testimonials} />
         <CallToAction cta={siteContent.cta} />
       </main>
       <Footer footer={siteContent.footer} />

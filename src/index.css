@@ -1,52 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
 :root {
-  --base: #f6f8f9;
-  --paper: #edf2f3;
-  --line: #d2dce0;
-  --ink: #0f2f36;
-  --muted: #55717a;
+  /* Core palette */
+  --ink:     #0d0e12;
+  --ink-90:  #16181e;
+  --ink-80:  #1e2028;
+  --surface: #f5f4f0;
+  --surface2: #ede9e3;
+  --gold:    #c9a84c;
+  --gold-lt: #e8d5a3;
+  --fog:     #8a8a8e;
+  --line:    rgba(255,255,255,0.08);
+  --line-lt: rgba(13,14,18,0.10);
 
-  --display: 'Fraunces', 'Georgia', serif;
-  --text: 'Source Sans 3', 'Segoe UI', sans-serif;
+  /* Type */
+  --display: 'Playfair Display', 'Georgia', serif;
+  --text: 'DM Sans', 'Helvetica Neue', sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html,
-body,
-#root {
-  min-height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--ink);
-  background: linear-gradient(180deg, #f9fbfc 0%, #f6f8f9 100%);
-  text-rendering: optimizeLegibility;
+  background: var(--surface);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3 {
+/* Typography base */
+h1, h2, h3, h4 {
   font-family: var(--display);
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--ink);
 }
 
-h1 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.08;
-}
-
-h2 {
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
-  line-height: 1.15;
-  margin: 0 0 10px;
-}
+h1 { font-size: clamp(2.8rem, 5.5vw, 5rem); }
+h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 p {
-  color: var(--muted);
-  line-height: 1.6;
+  color: var(--fog);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utility: dark section overrides */
+.dark-section {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4 {
+  color: var(--surface);
+}
+
+.dark-section p {
+  color: rgba(245, 244, 240, 0.6);
+}
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: var(--ink);
 }
