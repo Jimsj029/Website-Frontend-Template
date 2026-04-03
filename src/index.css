@@ -1,0 +1,52 @@
+:root {
+  --base: #f6f8f9;
+  --paper: #edf2f3;
+  --line: #d2dce0;
+  --ink: #0f2f36;
+  --muted: #55717a;
+
+  --display: 'Fraunces', 'Georgia', serif;
+  --text: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--text);
+  color: var(--ink);
+  background: linear-gradient(180deg, #f9fbfc 0%, #f6f8f9 100%);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.6;
+}
